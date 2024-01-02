@@ -1,0 +1,269 @@
+body {
+	width: 100%;
+
+}
+#logo {
+	height: 100px;
+	float: left;
+	margin: 40px;
+
+}
+nav {
+	background-color: transparent;
+	width: 100%;
+	height: 100px;
+}
+nav ul {
+	padding: 85px;
+	box-sizing: border-box;
+	text-align: right;
+}
+nav ul li {
+	display: inline;
+	font-family: "Mark OT Light", Helvetica;
+	font-size: 16px;
+	color: #002244;
+	font-weight:lighter;
+	padding: 10px;
+	margin: 5px;
+	text-transform: uppercase;
+}
+nav ul li a {
+	color: white;
+	text-decoration: none;
+}
+nav ul li a:hover {
+	text-decoration: underline;	
+}
+
+header {
+	background-color:transparent;
+	width: 100%;
+	height: 0px;
+
+	
+}
+header h1 {
+	font-family:"Mark OT Light", Helvetica;
+	color: #050505;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 13px 0px;
+	font-weight: 800;
+	float: left;
+}
+main h1 {
+	font-family: "Mark OT Light", Helvetica;
+	font-size: 24px;
+	color: #000033;
+	padding: 20px;
+	font-weight: 900;
+}
+main p {
+    font-family: "Mark OT Light", Helvetica;
+    font-weight: lighter;
+}
+h2 {
+	font-family: "Mark OT Light", Helvetica;
+	font-size: 30px;
+    font-weight: bolder;
+	color: #050505;
+	padding: 20px;
+
+}
+p,li {
+	font-family: "Mark OT Light", Helvetica;
+	font-size: 14px;
+	padding: 0 20px 10px 20px;
+	line-height: 16px;
+}
+
+body {
+      text-align: center;
+      background-color: black;
+    }
+
+p{
+	margin: 5px 0;
+	line-height: 1.7;
+}
+
+img{
+	max-width: 100%;
+}
+
+
+    /* 设置 menu 和 location 的样式 */
+#spotlight a{
+     margin: 110px; /* 可以根据需要调整间距 */
+     margin-top: 100px;
+     color: white;
+     font-size: 80px;
+     font-weight: bold;
+
+    }
+
+#spotlight-aboutus {
+	width: 100%;
+	height: 100vh;
+	background-image: url("../images/About us.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding-top: 260px;
+	box-sizing: border-box;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+#spotlight-aboutus h3 {
+	font-family: "Mark OT Light", Helvetica;
+	font-size: 25px;
+	color: white;
+	font-weight: lighter;
+	position: center;
+  	padding: 100px 0px 100px 0px;
+    text-align:center;
+}
+
+#spotlight-aboutus span{
+
+	font-family: "Mark OT Light", Helvetica;
+	font-size: 25px;
+	color: white;
+	font-weight: lighter;
+	
+    top: 310px;
+    text-align:center;
+}
+
+.card{
+	background-color: #C3B091;
+}
+.card-inner{
+	max-width: 700px;
+	margin: 0 auto;
+	color: #C3B091;
+}
+
+.card-text{
+	max-width: 500px;
+	text-align: center;
+	justify-self: center;
+	padding: 20px 0;
+	margin: 0 auto;
+	color: balck;
+	background-color: #C3B091;
+}
+
+.card-text .btn{
+	margin-top: 20px;
+}
+
+.grid-col-2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	align-items: center;
+	justify-content: space-between;
+}
+.grid-reversed :first-child{
+	order: 2;
+}
+
+.aboutus-content{
+	font-size: 12px;
+	color: BLACK;
+	font-weight: lighter;
+	background-color: #C3B091;
+	text-align: left;
+	top: 300px;
+}
+
+
+
+
+main {
+	width: 1140px;
+	margin: 0 auto 20px auto;
+}
+
+
+
+
+/* This is also correct: "section.feature-videos div.container-1140" */
+.container-1140 {
+	width: 1140px;
+	margin: 20px auto;
+}
+/* 改格式 */
+footer {
+	width: 100%;
+	height: 200px;
+	background-color: #4F3824;
+    opacity: 85%;
+	padding: 20px ;
+
+}
+
+.container-1140{
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	color: white;
+	text-align: left;
+}
+
+#contact {
+	font-size: 25px;
+
+}
+
+
+
+
+
+table{
+    margin: 0px 40px;
+   
+}
+
+table td, table th {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    font-size: .8em;
+    padding: 0.5em;
+    width: 30%;
+    border:1px solid black;
+}
+
+table thead tr th{
+    font-weight: bold;
+    
+    
+}
+
+table caption{
+    caption-side: bottom;
+    text-align:left;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    font-size: 0.75em;
+    color:#666;
+    margin: 1em;
+    
+}
+
+
+form legend{
+    font-family: "Mark OT Light", Helvetica;
+	font-size: 20px;
+	color: #000;
+	padding: 20px;
+	font-weight: 700;
+}
+
+form label{
+    margin: 20px;
+    font-family: "Mark OT Light", Helvetica;
+    font-weight:lighter;
+    font-size: 14px;
+}
+
+

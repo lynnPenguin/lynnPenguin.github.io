@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/menu.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菜单</title>
+    <meta charset="utf-8">
+<title>Qianteng | Official Website</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+</head>
+<body id="B1" style="background-color: #C3B091">
+    <header>
+        <img src="images/logo.svg" alt="Logo" id="logo">        
+        
+        <nav>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="location.html">LOCATION</a></li>
+            <li><a href="reservation.html">RESERVATION</a></li>
+            <li><a href="aboutus.html">ABOUT US</a></li>
+            
+        </ul>
+    </nav>
+        
+    </header>
+
+    <h1 id="M1">Menu</h1>
+    <label>Price Filter：
+        <select id="sortOrder" onchange="updateMenu()">
+            <option value="all">All</option>
+            <option value="lowToHigh">Ascending Price</option>
+            <option value="highToLow">Descending Price</option>
+            <option value="atoz">A-Z Name</option>
+            <option value="ztoa">Z-A Name</option>
+        </select>
+    </label>
+
+    <label>Foods Type：
+        <select id="foodTypeFilter" onchange="updateMenu()">
+            <option value="all">All</option>
+            <option value="A LaCarte">A LaCarte</option>
+            <option value="MainCuisine">MainCuisine</option>
+            <option value="Table Cooking for 2">Table Cooking for 2</option>
+        </select>
+    </label>
+
+    <div id="menu">
+        
+    </div>
+
+    <script>
+        var foods = [
+         {foodType:"A LaCarte" ,koreanName: "Mo Deum Soon Dea", englishName:"Assorted Korean style sausages.",  image: url="Mo Deum Soon Dea.jpg",price:20 },
+         {foodType:"A LaCarte" ,koreanName: "Bo Sam", englishName:"Steamed sliced pork with kimchi Korean-style paste.",  image: url="Bo Sam.jpg",price:20 },
+         {foodType:"A LaCarte" ,koreanName: "Dae Ji Jok Bal", englishName:"Deep steamed pork-feet. ",  image: "Dae Ji Jok Bal.jpg",price:20 },
+         {foodType:"A LaCarte" ,koreanName: "Tang Su Yuk", englishName:"Deep-fried pork with sweet, and sour sauce..",  image: "Tang Su Yuk.jpg",price:20 },
+         {foodType:"A LaCarte" ,koreanName: "Kam Pung Ki", englishName:"Deep-fried chicken with special sweet, sour, and spicy sauce.",  image: "Kam Pung Ki.jpg",price:20 },
+        {foodType:"A LaCarte" ,koreanName: "A-Gu Jim", englishName:"Steamed monkfish with bean sprouts, vegetables, and a special spicy sauce.",  image: "A-Gu Jim.jpg",price:20 },
+ {foodType:"A LaCarte" ,koreanName: "Hae Mul Jim", englishName:"Assorted seafood with bean sprouts, vegetables, and special spicy sauce..",  image: "Hae Mul Jim.jpg",price:20 },
+ {foodType:"A LaCarte" ,koreanName: "Do Ga Ni Muchim", englishName:"Ox-knee salad with sweet, and spicy sauce.",  image: "Do Ga Ni Muchim.jpg",price:20 },
+ {foodType:"A LaCarte" ,koreanName: "Golbaengyi Moochim", englishName:"Spicy sea snail salad with bean sprouts, and vegetables with special spicy sauce.",  image: "Golbaengyi Moochim.jpg",price:20 },
+ {foodType:"A LaCarte" ,koreanName: "Jae Yuk Bokeum", englishName:"Stir-fried pork with vegetables, and special spicy sauce.",  image: "Jae Yuk Bokeum.jpg",price:20 },
+ {foodType:"A LaCarte" ,koreanName: "Nak Ji Bokeum", englishName:"Stir-fried octopus with vegetables, and special spicy sauce.",  image: "Nak Ji Bokeum.jpg",price:20 },
+ {foodType:"A LaCarte" ,koreanName: "O-Jing A Bokeum", englishName:"Stir-fried squid with vegetables, a special spicy source.",  image: "O-Jing A Bokeum.jpg",price:20 },
+{foodType:"A LaCarte" ,koreanName: "Hae Mul Pa Jon", englishName:"Seafood pancakes with vegetables.",  image: "Hae Mul Pa Jon.jpg",price:20 },
+ {foodType:"A LaCarte" ,koreanName: "Jap Chae", englishName:"Glass noodles with sauteed vegetables and beef.",  image: "Jap Chae.jpg",price:15 },
+ {foodType:"MainCuisine" ,koreanName: "L.A Kal Bi Jung Sik", englishName:"L.A style cut B.B.Q short ribs marinated in special sauce.",  image: "L.A Kal Bi Jung Sik.jpg",price:15 },
+{foodType:"MainCuisine" ,koreanName: "Bulgiki Jung Sik", englishName:"Slice sirloin beef marinated in special sauce.",  image: "Bulgiki Jung Sik.jpg",price:13 },
+{foodType:"MainCuisine" ,koreanName: "Mackerel", englishName:"Grilled mackerel.",  image: "Mackerel.jpg",price:12 },
+{foodType:"MainCuisine" ,koreanName: "Yellow Corvina", englishName:"Grilled yellow corvina.",  image: "Yellow Corvina.jpg",price:12 },
+{foodType:"MainCuisine" ,koreanName: "Seang Tae Tang", englishName:"Fresh spicy pollack soup with vegetables.",  image: "Seang Tae Tang.jpg",price:12},
+{foodType:"MainCuisine" ,koreanName: "Chicken Gaseu", englishName:"Deep-fried chicken cutlet with huh gane sauce, salad.",  image: "Chicken Gaseu.jpg",price:12},
+{foodType:"MainCuisine" ,koreanName: "Dongaseu", englishName:"Deep-fried chicken cutlet with huh Ga Ne sauce, salad.",  image: "Dongaseu.jpg",price:10 },
+{foodType:"MainCuisine" ,koreanName: "Took Baeki Bulgoki", englishName:"Seasoned marinated sirloin beef in a hot stone bowl with glass noodles.",  image: "Took Baeki Bulgoki.jpg",price:10 },
+{foodType:"MainCuisine" ,koreanName: "Yum So Tang", englishName:"Spicy black goat stew with vegetables.",  image: "Yum So Tang.jpg",price:10 },
+{foodType:"MainCuisine" ,koreanName: "Kimchi Bokeum Bab", englishName:"Fried rice with kimchi, and pork.",  image: "Kimchi Bokeum Bab.jpg",price:10 },
+{foodType:"MainCuisine" ,koreanName: "Bibim Bap", englishName:"Steamed rice is mixed with beef, fried egg, vegetables, and Korean spicy sauce.",  image: "Bibim Bap.jpg",price:9 },
+ {foodType:"MainCuisine" ,koreanName: "Kal Bi Tang", englishName:"Beef short ribs stew with glass noodles, and vegetables.",  image: "Kal Bi Tang.jpg",price:9 },
+{foodType:"MainCuisine" ,koreanName: "Kimchi Chigae", englishName:"Kimchi stew with pork.",  image: "Kimchi Chigae.jpg",price:9 },
+{foodType:"MainCuisine" ,koreanName: "Do Gani Tang", englishName:"Ox-knee soup with glass noodles.",  image: "Do Gani Tang.jpg",price:9 },
+{foodType:"MainCuisine" ,koreanName: "Yuk Gae Jang", englishName:"Spicy beef soup with vegetables and glass noodles.",  image: "Yuk Gae Jang.jpg",price:9 },
+{foodType:"MainCuisine" ,koreanName: "Kam Ja Tang", englishName:"Pork bone soup.",  image: "Kam Ja Tang.jpg",price:8 },
+{foodType:"MainCuisine" ,koreanName: "Soon Dae Kuk", englishName:"Korean-style sausage stew.",  image: "Soon Dae Kuk.jpg",price:8},
+{foodType:"MainCuisine" ,koreanName: "Sul Nung Tang", englishName:"Beef broth soup with glass noodles.",  image: "Sul Nung Tang.jpg",price:8 },
+{foodType:"MainCuisine" ,koreanName: "Deok Man Du", englishName:"Dumpling soup with rice cake, and vegetables.",  image: "Deok Man Du.jpg",price:8 },
+{foodType:"MainCuisine" ,koreanName: "Hae Jang Kuk", englishName:"Soybean paste stew with bean sprouts and vegetable-clotted blood",  image: "Hae Jang Kuk.jpg",price:8 },
+{foodType:"MainCuisine" ,koreanName: "Doen Jang Chigae", englishName:"Soybean paste stew with tofu, vegetables, and seafood.",  image: "Doen Jang Chigae.jpg",price:8 },
+{foodType:"MainCuisine" ,koreanName: "Dduk Boki", englishName:"Spicy rice cake",  image: "Dduk Boki.jpg",price:8},
+{foodType:"Table Cooking for 2" ,koreanName: "Kal Bi", englishName:"Short ribs marinated in special sauce with soybean paste soup or seafood tofu soup.",  image: "Kal Bi.jpg",price:40},
+{foodType:"Table Cooking for 2" ,koreanName: "Jun Mul Luck", englishName:"Thinly sliced ​​sirloin beef marinated in special sauce with soybean paste soup or seafood tofu soup. ",  image: "Jun Mul Luck.jpg",price:40},
+{foodType:"Table Cooking for 2" ,koreanName: "Bul Go Ki", englishName:"Sliced ​​sirloin beef marinated in special sauce with soybean paste soup or seafood tofu soup.",  image: "Bul Go Ki.jpg",price:30},
+{foodType:"Table Cooking for 2" ,koreanName: "Sam Kyup Sal", englishName:"Thinly sliced ​​pork belly with soybean paste soup or seafood tofu soup.",  image: "Sam Kyup Sal.jpg",price:30},
+{foodType:"Table Cooking for 2" ,koreanName: "Soon Dae Bokeum", englishName:"Assorted Korean-style sausage stir-fried in a special spicy sauce.",  image: "Soon Dae Bokeum.jpg",price:30},
+{foodType:"Table Cooking for 2" ,koreanName: "Makchang Gui", englishName:"Grilled pork entrails with vegetables.",  image: "Makchang Gui.jpg",price:30},
+{foodType:"Table Cooking for 2" ,koreanName: "Kkotge Tang Jeon Gol", englishName:"Assorted blue crab with vegetables in a hot pot.",  image: "Kkotge Tang Jeon Gol.jpg",price:30},
+{foodType:"Table Cooking for 2" ,koreanName: "Hae Mul Jeon Gol", englishName:"Assorted seafood with vegetables in a hot pot.",  image: "Hae Mul Jeon Gol.jpg",price:30},
+{foodType:"Table Cooking for 2" ,koreanName: "Gopchang Jeon Gol", englishName:"Stir-fried beef intestine tripe with vegetables.",  image: "Gopchang Jeon Gol.jpg",price:30},
+{foodType:"Table Cooking for 2" ,koreanName: "Bulnak Jeon Gol", englishName:"Bulgogi, octopus, assorted vegetables on a hot pot.",  image: "Bulnak Jeon Gol.jpg",price:30},
+{foodType:"Table Cooking for 2" ,koreanName: "Yum So Jeon Gol", englishName:"A black goat with vegetables in a hot pot.",  image: "Yum So Jeon Gol.jpg",price:30},
+{foodType:"Table Cooking for 2" ,koreanName: "Budae Jeon Gol", englishName:"Fresh pork belly soup with kimchi, tofu, sausage, and hot pot.",  image: "Budae Jeon Gol.jpg",price:30},
+];
+
+
+        function updateMenu() {
+            var sortOrder = document.getElementById("sortOrder").value;
+            var sortedFoods = sortFoods(foods, sortOrder);
+            displayMenu(sortedFoods);
+        }
+
+        function sortFoods(foods, sortOrder) {
+            return foods.slice().sort(function (a, b) {
+                if (sortOrder === "lowToHigh") {
+                    return a.price - b.price;
+                } else if (sortOrder === "highToLow") {
+                    return b.price - a.price;
+                } else if (sortOrder === "atoz") {
+                    return a.koreanName.localeCompare(b.koreanName);
+                } else if (sortOrder === "ztoa") {
+                    return b.koreanName.localeCompare(a.koreanName);
+                }
+            });
+        }
+
+        function displayMenu(foods) {
+            var menuElement = document.getElementById("menu");
+            menuElement.innerHTML = "";
+
+            foods.forEach(function (food) {
+                var card = document.createElement("div");
+                card.className = "card";
+
+                var img = document.createElement("img");
+                img.src = food.image;
+                card.appendChild(img);
+
+                var koreanName = document.createElement("h3");
+                koreanName.textContent = food.koreanName;
+                card.appendChild(koreanName);
+
+                var englishName = document.createElement("p");
+                englishName.textContent = food.englishName;
+                card.appendChild(englishName);
+
+                var price = document.createElement("p");
+                price.textContent = "Price: $" + food.price;
+                card.appendChild(price);
+
+                menuElement.appendChild(card);
+            });
+        }
+
+        function updateMenu() {
+            var sortOrder = document.getElementById("sortOrder").value;
+            var foodTypeFilter = document.getElementById("foodTypeFilter").value;
+
+            var filteredFoods = filterFoods(foods, foodTypeFilter);
+            var sortedAndFilteredFoods = sortFoods(filteredFoods, sortOrder);
+            displayMenu(sortedAndFilteredFoods);
+        }
+
+        function filterFoods(foods, foodType) {
+            if (foodType === "all") {
+                return foods;
+            } else {
+                return foods.filter(function (food) {
+                    return food.foodType === foodType;
+                });
+            }
+        }
+
+        // 初始化时显示默认排序
+        updateMenu();
+    </script>
+
+    <footer>
+        <div class="container-1140">
+            <p id="contact">Contact us</p>
+            <br>
+            <p>19 Finch Ave W</p>
+            <p>North York ON M2N 7K4</p>
+           
+            <p>(416)901-1288</p>
+
+        </div>
+    </footer>
+
+
+</body>
+</html>
