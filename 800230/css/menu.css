@@ -1,0 +1,58 @@
+
+
+#sortOrder {
+    margin-top: 50px;
+}
+
+#M1{
+    padding:0px;
+    justify-content: center;
+    font-size: 60px;
+    margin-right: 120px;
+    margin-top: 150px;
+}
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    diplay:block;
+    padding:25px;
+    margin:15px;
+    
+    
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+    position:center;
+
+}
+
+.price {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+label{
+    padding-top:200px;
+
+}
+
+
+

@@ -1,0 +1,419 @@
+body {
+	width: 100%;
+
+}
+
+#logo {
+	height: 100px;
+	float: left;
+	margin: 40px;
+
+}
+nav {
+	background-color: transparent;
+	width: 100%;
+	height: 100px;
+}
+nav ul {
+	padding: 85px;
+	box-sizing: border-box;
+	text-align: right;
+}
+nav ul li {
+	display: inline;
+	font-family: "Mark OT Light", Helvetica;
+	font-size: 16px;
+	color: #002244;
+	font-weight:lighter;
+	padding: 10px;
+	margin: 5px;
+	text-transform: uppercase;
+}
+nav ul li a {
+	color: white;
+	text-decoration: none;
+}
+nav ul li a:hover {
+	text-decoration: underline;	
+}
+
+header {
+	background-color:transparent;
+	width: 100%;
+	height: 0px;
+
+	
+}
+header h1 {
+	font-family:"Mark OT Light", Helvetica;
+	color: #050505;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 13px 0px;
+	font-weight: 800;
+	float: left;
+}
+main h1 {
+	font-family: "Mark OT Light", Helvetica;
+	font-size: 24px;
+	color: #000033;
+	padding: 20px;
+	font-weight: 900;
+}
+main p {
+    font-family: "Mark OT Light", Helvetica;
+    font-weight: lighter;
+}
+h2 {
+	font-family: "Mark OT Light", Helvetica;
+	font-size: 30px;
+    font-weight: bolder;
+	color: #050505;
+	padding: 20px;
+
+}
+p,li {
+	font-family: "Mark OT Light", Helvetica;
+	font-size: 14px;
+	padding: 0 20px 10px 20px;
+	line-height: 16px;
+}
+
+body {
+      text-align: center;
+      background-color: black;
+    }
+
+    /* 设置 menu 和 location 的样式 */
+#spotlight a{
+     margin: 110px; 
+     margin-top: 100px;
+     color: white;
+     font-size: 80px;
+     font-weight: bold;
+
+    }
+
+#spotlight {
+	width: 100%;
+	height: 100vh;
+	background-image: url("../images/home.gif");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding-top: 260px;
+	box-sizing: border-box;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+#spotlight h3 {
+	font-family: "Mark OT Light", Helvetica;
+	font-size: 25px;
+	color: white;
+	font-weight: lighter;
+	position: center;
+  	padding: 100px 0px 100px 0px;
+    text-align:center;
+}
+
+#spotlight span{
+
+	font-family: "Mark OT Light", Helvetica;
+	font-size: 25px;
+	color: white;
+	font-weight: lighter;
+	
+    top: 310px;
+    text-align:center;
+}
+
+
+
+
+
+
+main {
+	width: 1140px;
+	margin: 0 auto 20px auto;
+}
+
+
+
+/* This is also correct: "section.feature-videos div.container-1140" */
+.container-1140 {
+	width: 1140px;
+	margin: 20px auto;
+}
+/* 改格式 */
+footer {
+	width: 100%;
+	height: 200px;
+	background-color: #4F3824;
+    opacity: 85%;
+	padding: 20px ;
+
+}
+
+.container-1140{
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	color: white;
+	text-align: left;
+}
+
+#contact {
+	font-size: 25px;
+
+}
+
+.site-highlights {
+	width: 100%;
+	margin: 20px 0;
+}
+.site-highlights .highlight {
+	width: 24%;
+	display: inline-block;
+	float: left;
+	margin: 0 2px;
+}
+.site-highlights .highlight img {
+	width: 100%;
+}
+.highlight h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+}
+.highlight p {
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";	
+}
+
+
+
+
+/* location */
+.mapcontainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.map,
+.location {
+  width: 45%; 
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+#spotlight-location {
+	width: 100%;
+	height: 100vh;
+	background-image: url("../images/locationbg.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding-top: 260px;
+
+	box-sizing: border-box;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+#hours{
+	font-weight: bold;
+}
+.reservation-shortcut {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+  	font-family: "Mark OT Light", Helvetica;
+    font-size: 16px;
+    border-radius: 4px;
+}
+/*reservation*/
+#reservation {
+	width: 100%;
+	background-image: url("../images/reservationbg.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding-top: 180px;
+	padding-bottom: 80px;
+	box-sizing: border-box;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+#reservationForm {
+	background-color: white;
+	width: 40%;
+	padding: 50px;
+	border-radius: 50px;
+	margin: 0 auto;
+}
+
+#reservationTitle {
+	margin-top: 0px;
+}
+
+.reservationinfo {
+	color: grey;
+	font-size: 10px;
+	text-align: left;
+	margin-left: 0;
+}
+
+.requiredInfo {
+	color: red;
+}
+
+.formGroup input,
+.formGroup label,
+.formGroup p {
+	display: block;
+	text-align: left;
+	width: 100%;
+	font-family: "Mark OT Light", Helvetica;
+	margin-bottom: 20px;
+}
+
+.formGroup label {
+	margin-left: 0px;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+button {
+	padding: 10px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+
+button:hover {
+	background-color: #45a049;
+}
+
+.container-1140 {
+	width: 1140px;
+	margin: 20px auto;
+}
+
+/*  */
+footer {
+	width: 100%;
+	height: 200px;
+	background-color: #4F3824;
+	opacity: 85%;
+	padding: 20px;
+
+}
+
+.container-1140 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	color: white;
+	text-align: left;
+}
+
+#contact {
+	font-size: 25px;
+}
+
+/* about us*/
+
+
+.text-md{
+	margin: 5px 0;
+	line-height: 1.7;
+}
+
+
+
+#spotlight a{
+     margin: 110px; /* 可以根据需要调整间距 */
+     margin-top: 100px;
+     color: white;
+     font-size: 80px;
+     font-weight: bold;
+
+    }
+
+#spotlight-aboutus {
+	width: 100%;
+	height: 100vh;
+	background-image: url("../images/About us.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding-top: 260px;
+	box-sizing: border-box;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+#spotlight-aboutus h3 {
+	font-family: "Mark OT Light", Helvetica;
+	font-size: 25px;
+	color: white;
+	font-weight: lighter;
+	position: center;
+  	padding: 100px 0px 100px 0px;
+    text-align:center;
+}
+
+#spotlight-aboutus span{
+
+	font-family: "Mark OT Light", Helvetica;
+	font-size: 25px;
+	color: white;
+	font-weight: lighter;
+	
+    top: 310px;
+    text-align:center;
+}
+
+.card{
+	background-color: #C3B091;
+}
+.card-inner{
+	max-width: 700px;
+	margin: 0 auto;
+	color: #C3B091;
+}
+
+.card-text{
+	max-width: 500px;
+	text-align: center;
+	justify-self: center;
+	padding: 20px 0;
+	margin: 0 auto;
+	
+	background-color: #C3B091;
+}
+
+.card-text .btn{
+	margin-top: 20px;
+}
+
+.grid-col-2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	align-items: center;
+	justify-content: space-between;
+}
+.grid-reversed :first-child{
+	order: 2;
+}
+
+.aboutus-content{
+	font-size: 12px;
+	color: BLACK;
+	font-weight: lighter;
+	background-color: #C3B091;
+	text-align: left;
+	top: 300px;
+}
